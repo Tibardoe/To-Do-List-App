@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFE1FF;
+    font-family: "Finger Paint", sans-serif;
+}
+
+header {
+    background-color: #433878;
+}
+
+header h1 {
+    font-size: 5rem;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+
+.text-box {
+    width: 50%;
+}
+
+.input-area {
+    margin-bottom: 50px;
+    display: flex;
+}
+
+.input-area input {
+    width: 90%;
+    font-size: 2rem;
+    padding: 10px 0;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid;
+    font-family: "Finger Paint", sans-serif;
+}
+
+.add-button {
+    padding: 8px 20px;
+    font-size: 2rem;
+    font-family: "Finger Paint", sans-serif;
+    border-radius: 15px;
+    background-color: #7E60BF;
+    border: none;
+    border-bottom: 2px solid;
+}
+
+.add-button:hover {
+    background-color: #3a2762;
+    transition: .3s ease;
+}
+
+.checkbox-container {
+    font-size: 2rem;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.checkbox-container input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+
+.checkbox-container .checkmark {
+    width: 20px;
+    height: 20px;
+    background-color: #E4B1F0;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.checkbox-container input[type="checkbox"]:checked+.checkmark::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 7px;
+    width: 6px;
+    height: 10px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+footer {
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* On mobile */
+
+@media (max-width: 956px) {
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 83vh;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .checkbox-container .checkmark {
+        width: 15px;
+        height: 15px;
+    }
+
+    .checkbox-container input[type="checkbox"]:checked+.checkmark::after {
+        top: 2px;
+    }
+
+    .add-button {
+        font-size: 1rem;
+        padding: 4px 10px;
+        border-radius: 10px;
+    }
+
+    .input-area input {
+        width: 90%;
+        font-size: 0.6rem;
+    }
+
+    .checkbox-container {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+}
+
+
+/* On tablets */
+
+@media (min-width: 951px) and (max-width: 1200px) {
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 83vh;
+    }
+
+    header h1 {
+        font-size: 3.5rem;
+    }
+
+    .add-button {
+        font-size: 1.5rem;
+        padding: 4px 10px;
+        border-radius: 10px;
+    }
+
+    .input-area input {
+        width: 90%;
+        font-size: 1.5rem;
+    }
+
+    .checkbox-container {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        font-size: 1.5rem;
+    }
+}
